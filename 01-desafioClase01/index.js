@@ -4,14 +4,14 @@ const nuevoProducto = new Container("producto.txt");
 const mostrarMenu = () => {
   setTimeout(() => {
     console.log(`
-      Choose an option:
+      Digite numero opcion:
 
-      1.save
-      2.getById
-      3.getAll
-      4.deleteById
-      5.deleteAll
-      6.exit
+      1.save (Recibe un objeto y lo guarda)
+      2.getById  (Recibe un id y devuelve el objeto con ese id, o null si no está)
+      3.getAll  (Devuelve un array con lo s objetos presentes)
+      4.deleteById ( Elimina el objeto con el id buscado)
+      5.deleteAll  ( Elimina todos los objetos presentes.)
+      6.exit 
   `);
   }, 1000);
 };
@@ -20,7 +20,6 @@ mostrarMenu();
 function menu() {
   let stdin = process.openStdin();
 
-  
   stdin.addListener("data", function (d) {
     let option = d.toString().trim();
 
