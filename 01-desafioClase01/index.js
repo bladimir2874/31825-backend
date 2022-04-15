@@ -20,6 +20,7 @@ mostrarMenu();
 function menu() {
   let stdin = process.openStdin();
 
+  
   stdin.addListener("data", function (d) {
     let option = d.toString().trim();
 
